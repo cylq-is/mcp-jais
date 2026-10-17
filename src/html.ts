@@ -6,8 +6,8 @@
  * page with many branches over the free plan's 10 ms CPU budget. Tokenizing
  * the page in JavaScript with one regex is several times cheaper.
  *
- * The tree is built the way BeautifulSoup's "html.parser" builder (used by the
- * Python version) builds it: no implied end tags, void elements never take
+ * The tree is built the way BeautifulSoup's "html.parser" builder builds it,
+ * which is what this parser replaced: no implied end tags, void elements never take
  * children, and an end tag closes the nearest open element of that name or is
  * ignored when there is none.
  */

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import businessBranch from "../../tests/fixtures/business_branch.html?raw";
-import businessCluster from "../../tests/fixtures/business_cluster.html?raw";
+import businessBranch from "./fixtures/business_branch.html?raw";
+import businessCluster from "./fixtures/business_cluster.html?raw";
 import { searchHash } from "../src/client";
 import { parseBusinesses, parseEntity, parsePeople } from "../src/parsing";
 

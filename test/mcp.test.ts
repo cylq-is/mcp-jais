@@ -1,7 +1,7 @@
 import { createMcpHandler } from "agents/mcp/server";
 import { createExecutionContext, env } from "cloudflare:test";
 import { describe, expect, it } from "vitest";
-import businessBranch from "../../tests/fixtures/business_branch.html?raw";
+import businessBranch from "./fixtures/business_branch.html?raw";
 import { JaClient } from "../src/client";
 import { buildMcp } from "../src/mcp";
 
