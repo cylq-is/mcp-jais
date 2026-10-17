@@ -1,7 +1,7 @@
 # mcp-jais
 
-REST API and MCP server for [ja.is](https://ja.is), the Icelandic phone directory,
-running on Cloudflare Workers (free plan).
+MCP server and REST API for [ja.is](https://ja.is), the Icelandic phone directory,
+running on Cloudflare Workers.
 
 Live at https://mcp.mcp-jais.workers.dev — MCP endpoint:
 `https://mcp.mcp-jais.workers.dev/mcp`.
@@ -107,7 +107,8 @@ Detail responses include `phones` (with a `marketing_ban` flag for numbers marke
 
 Pages are parsed by a small regex tokenizer (`src/html.ts`) rather than
 HTMLRewriter: HTMLRewriter hands every element and text chunk to JavaScript, which
-put large business pages over the free plan's 10 ms CPU limit.
+took large business pages to 15–20 ms of CPU per request; the tokenizer keeps them
+at a few milliseconds.
 
 ## Tests
 
