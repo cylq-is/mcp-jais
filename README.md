@@ -1,10 +1,10 @@
-# jaapi
+# mcp-jais
 
 REST API and MCP server for [ja.is](https://ja.is), the Icelandic phone directory,
 running on Cloudflare Workers (free plan).
 
-Live at https://jaapi.jaapi-worker.workers.dev — MCP endpoint:
-`https://jaapi.jaapi-worker.workers.dev/mcp`.
+Live at https://mcp.mcp-jais.workers.dev — MCP endpoint:
+`https://mcp.mcp-jais.workers.dev/mcp`.
 
 ## Run locally
 
@@ -52,7 +52,7 @@ choose the **Streamable HTTP** transport and enter the `/mcp` URL.
 **Claude Code:**
 
 ```sh
-claude mcp add --transport http ja-is https://jaapi.jaapi-worker.workers.dev/mcp
+claude mcp add --transport http ja-is https://mcp.mcp-jais.workers.dev/mcp
 ```
 
 Run `/mcp` inside Claude Code to check that it's connected.
