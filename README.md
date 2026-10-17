@@ -120,6 +120,30 @@ The container listens on `$PORT` (default 8000).
 The rate limit and cache are in memory, so each instance enforces its own.
 Outgoing requests to ja.is are capped at 4 at a time per instance.
 
+## Cloudflare Workers
+
+`worker/` is a TypeScript port of the same server (the REST routes and the MCP
+endpoint) that runs on the Cloudflare Workers free plan. It is live at
+https://jaapi.jaapi-worker.workers.dev (MCP: `https://jaapi.jaapi-worker.workers.dev/mcp`).
+
+```sh
+cd worker
+npm install
+npm test          # runs in the Workers runtime; includes a parity check against the Python parser
+npx wrangler dev  # http://localhost:8787
+npx wrangler deploy
+```
+
+Differences from the Python server:
+
+- No per-IP rate limit.
+- Parsed results are cached in memory per Worker isolate, so the cache is per data
+  centre and is lost whenever Cloudflare recycles the isolate. (The Cache API does
+  nothing on `workers.dev` hostnames.)
+- Pages are parsed by a small regex tokenizer (`worker/src/html.ts`) instead of
+  BeautifulSoup. HTMLRewriter was too slow for the free plan's 10 ms CPU limit
+  because every element and text chunk crosses into JavaScript.
+
 ## How it talks to ja.is
 
 - **Search** uses `/liveresult/`, the JSON endpoint the ja.is frontend calls. Requests
