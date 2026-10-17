@@ -1,0 +1,2720 @@
+<!DOCTYPE html>
+<html lang="is" class="">
+<head prefix="og: http://ogp.me/ns#">
+  <title>Domino&#x27;s Pizza - Já.is</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  
+  <meta name="apple-itunes-app" content="app-id=829550202">
+  <meta name="google-play-app" content="app-id=is.ja.jaapp">
+  
+  <meta name="facebook-domain-verification" content="x37fj9flwqvuqeopa2sm5jqggm46g2">
+  <link rel="apple-touch-icon" href="https://jaweb-static-cdn.ja.is/i/favicons/ja-logo-180-white.04b282df0781.png">
+  <link rel="shortcut icon" href="https://jaweb-static-cdn.ja.is/i/favicons/ja-logo-128.2a8164c0f44f.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="https://jaweb-static-cdn.ja.is/i/favicons/ja-logo-64.ce334b4bba34.png">
+  
+  
+  
+  <link rel="alternate" hreflang="is" href="https://ja.is/dominos/9XMkg/">
+  
+  <link rel="alternate" hreflang="en" href="https://en.ja.is/dominos/9XMkg/">
+  
+  
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M75PF47');</script>
+<!-- End Google Tag Manager -->
+
+  
+  <link href="https://jaweb-static-cdn.ja.is/dist/app.d44e34077852.css" rel="stylesheet" />
+  
+<script>
+  (function(){
+    // define the key where the global analytics object will be accessible
+    // customers can safely set this to be something else if need be
+    var globalAnalyticsKey = "analytics"
+
+    // Create a queue, but don't obliterate an existing one!
+    var analytics = window[globalAnalyticsKey] = window[globalAnalyticsKey] || [];
+
+    // If the real analytics.js is already on the page return.
+    if (analytics.initialize) return;
+
+    // If the snippet was invoked already show an error.
+    if (analytics.invoked) {
+      if (window.console && console.error) {
+        console.error("Segment snippet included twice.");
+      }
+      return;
+    }
+
+    // Invoked flag, to make sure the snippet
+    // is never invoked twice.
+    analytics.invoked = true;
+
+    // A list of the methods in Analytics.js to stub.
+    analytics.methods = [
+      'trackSubmit',
+      'trackClick',
+      'trackLink',
+      'trackForm',
+      'pageview',
+      'identify',
+      'reset',
+      'group',
+      'track',
+      'ready',
+      'alias',
+      'debug',
+      'page',
+      'screen',
+      'once',
+      'off',
+      'on',
+      'addSourceMiddleware',
+      'addIntegrationMiddleware',
+      'setAnonymousId',
+      'addDestinationMiddleware',
+      'register'
+    ];
+
+    // Define a factory to create stubs. These are placeholders
+    // for methods in Analytics.js so that you never have to wait
+    // for it to load to actually record data. The `method` is
+    // stored as the first argument, so we can replay the data.
+    analytics.factory = function(e) {
+      return function() {
+        if (window[globalAnalyticsKey].initialized) {
+          // Sometimes users assigned analytics to a variable before analytics is done loading, resulting in a stale reference.
+          // If so, proxy any calls to the 'real' analytics instance.
+          return window[globalAnalyticsKey][e].apply(window[globalAnalyticsKey], arguments);
+        }
+        var args = Array.prototype.slice.call(arguments);
+        
+        // Add buffered page context object so page information is always up-to-date
+        if (["track", "screen", "alias", "group", "page", "identify"].indexOf(e) > -1) {
+          var c = document.querySelector("link[rel='canonical']");
+          args.push({
+            __t: 'bpc',
+            c: c && c.getAttribute("href") || undefined,
+            p: location.pathname,
+            u: location.href,
+            s: location.search,
+            t: document.title,
+            r: document.referrer
+          });
+        }
+  
+        args.unshift(e);
+        analytics.push(args);
+        return analytics;
+      };
+    };
+
+    // For each of our methods, generate a queueing stub.
+    for (var i = 0; i < analytics.methods.length; i++) {
+      var key = analytics.methods[i];
+      analytics[key] = analytics.factory(key);
+    }
+
+    var ignoredTimezones = ["Asia/Shanghai", "Asia/Calcutta"];
+    var ignoredUserAgents = ["HeadlessChrome"];
+
+    function shouldSkipLoad() {
+      function getTimezone() {
+        try {
+          return window.Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+        } catch (e) {
+          return '';
+        }
+      }
+
+      var timezone = getTimezone().toLowerCase();
+      for(var i = 0; i < ignoredTimezones.length; i++) {
+        if(timezone.indexOf(ignoredTimezones[i].toLowerCase()) === 0) {
+          return true;
+        }
+      }
+
+      var userAgent = (window.navigator.userAgent || '').toLowerCase();
+      for(var i = 0; i < ignoredUserAgents.length; i++) {
+        if(userAgent.indexOf(ignoredUserAgents[i].toLowerCase()) >= 0) {
+          return true;
+        }
+      }
+
+      return false;
+    }
+
+    // Define a method to load Analytics.js from our CDN,
+    // and that will be sure to only ever load it once.
+    analytics.load = function(key, options) {
+      // Create an async script element based on your key.
+
+      if(shouldSkipLoad()) {
+        return;
+      }
+
+      var t = document.createElement("script");
+      t.type = "text/javascript";
+      t.async = true;
+      t.setAttribute("data-global-segment-analytics-key", globalAnalyticsKey)
+      t.src = "https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";
+
+      // Insert our script next to the first script element.
+      var first = document.getElementsByTagName("script")[0];
+      first.parentNode.insertBefore(t, first);
+      analytics._loadOptions = options;
+    };
+    analytics._writeKey = "EnOS2QrU9AIKMEuHHgdiCpT28gAdmiNU";
+
+    // Add a version to keep track of what's in the wild.
+    analytics.SNIPPET_VERSION = "5.2.1";
+    analytics.JA_VERSION = "0.0.3";
+
+    
+    var IPMaskMiddleware = function(event) {
+      var payload = event.payload;
+      var next = event.next;
+      payload.obj.context.ip = '0.0.0.0';
+      next(payload);
+    };
+    analytics.addSourceMiddleware(IPMaskMiddleware);
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+      var page = {"name": "Detail", "properties": {"type": "company", "clusterKey": "dominos", "nameId": "1769787", "listingGroupId": "8173da31-8b08-41c6-8ba1-e9e7f25d8435", "listingId": "c03c4286-651a-423a-8443-f6c05807c00b"}};
+      analytics.page(page.category, page.name, page.properties, page.options);
+    
+
+  })();
+</script>
+
+  
+  
+  <script>
+function ngettext(s,p,c){return (c%10!=1 || c%100==11)?p:s};
+function gettext_noop(m){return m};
+gettext = gettext_noop;
+function pgettext(c,m){return m};
+function npgettext(cx,s,p,c){return ngettext(s,p,c)};
+function interpolate(f,o,n){
+  if(n){
+    return f.replace(/%\(\w+\)s/g, function(m){return String(o[m.slice(2,-2)])});
+  }else{
+    return f.replace(/%s/g, function(m){return String(o.shift())});
+  }
+}
+  </script>
+
+
+  
+  
+    
+
+  <meta property="fb:app_id" content="117577358301991" />
+
+
+  <meta property="og:site_name" content="Já.is">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ja.is/dominos/9XMkg/">
+
+
+
+    
+  
+  <meta property="og:image" content="https://ja.is/og_banner/dominos/">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="315">
+  
+
+  
+  
+  
+    <style type="text/css">
+      body.info { background-color: #565a5c; }
+      .action-branded { background-color: #565a5c !important; }
+      .desktop-result-header {border: none !important}
+      .result-info-component {border: none !important}
+    </style>
+  
+
+  
+    <meta property="og:image" content="https://ja.is/og_360/1769787/">
+    <meta property="og:image:width" content="879">
+    <meta property="og:image:height" content="460">
+  
+  
+    <meta property="og:image" content="https://ja.is/kort/static/?x=356117&amp;y=408739&amp;z=10&amp;mark_x=356117&amp;mark_y=408739&amp;mark=1&amp;width=1200&amp;height=630&amp;mark_type=white">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+  
+
+  
+    <meta property="og:description" content="Domino&#x27;s Pizza, Ánanaustum 15, 101 Reykjavík. Upplýsingar um símanúmer, tengiliðaupplýsingar, kort, vegvísun, götumynd og afgreiðslutíma." >
+    <meta name="description" content="Domino&#x27;s Pizza, Ánanaustum 15, 101 Reykjavík. Upplýsingar um símanúmer, tengiliðaupplýsingar, kort, vegvísun, götumynd og afgreiðslutíma.">
+  
+
+</head>
+<body class=" sub info branded light-theme">
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M75PF47"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  
+  
+    
+
+
+
+  
+  
+    <div id="fb-root"></div>
+    <script>
+      window.fbAppId = '117577358301991';
+      window.fbAsyncInit = function() {
+        // init the FB JS SDK
+        FB.init({
+          appId      : '117577358301991', // App ID from the App Dashboard
+          status     : true, // check the login status upon init? // ja-fb.js depends on this
+          cookie     : false, // set sessions cookies to allow your server to access the session?
+          localStorage: true,
+          xfbml      : false, // parse XFBML tags on this page? // required for fb-login-button
+          version    : 'v19.0'
+        });
+      };
+
+      // Load the SDK's source Asynchronously
+      (function(d, s, id, debug){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/is_IS/sdk" + (debug?"/debug":"") + ".js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk', false));
+    </script>
+  
+  <script>
+    
+    window.user = {
+      is_authenticated: false,
+      
+      image: "",
+      initials: "",
+      
+      hasWishlists: false,
+    };
+    
+  </script>
+
+  
+  <div id="product-page" class="remove-for-results">
+
+        
+
+      <div class="result-body" data-name-id="1769787" data-listing-id="c03c4286-651a-423a-8443-f6c05807c00b"  data-cluster-key="dominos" data-listing-group-id="8173da31-8b08-41c6-8ba1-e9e7f25d8435" data-category="company">
+        <input type="hidden" name="scope" value="ProductPage" id="scopestring" />
+
+        
+
+
+
+
+
+<div class="desktop-result-header">
+  
+    <div class="result-banner-image-container">
+      
+        <a href="http://www.dominos.is/"
+           target="_blank" rel="noopener nofollow" data-event-name="Followed link" data-event-linktype="webpage" data-event-what="banner">
+      
+        <img class="result-banner-image" src="https://thumbs-cdn.ja.is/is-ja-stella/images/9d97e704-4686-44a3-ae79-3ec9da6be791_orig/1018x360/0,397,5000,1768/0/0/4fbecb34af2b04e7/" alt="Domino&#x27;s Pizza">
+      
+        </a>
+      
+    </div>
+  
+
+
+    <div class="desktop-result-header-text">
+      
+      <div class="desktop-result-header-heading">
+        <div class="desktop-result-header-brand">
+          
+            <div class="desktop-result-logo-container">
+              
+                <img class="desktop-result-logo" src="https://thumbs-cdn.ja.is/is-ja-stella/images/3587c501-7a02-4cfa-9676-39e0c1bc6f21_orig/200x140/0,0,2694,561/0/0/4cdeb5c5d086ba7e/" alt="Domino&#x27;s Pizza" srcset="https://thumbs-cdn.ja.is/is-ja-stella/images/3587c501-7a02-4cfa-9676-39e0c1bc6f21_orig/200x140/0,0,2694,561/0/0/4cdeb5c5d086ba7e/ 1x, https://thumbs-cdn.ja.is/is-ja-stella/images/3587c501-7a02-4cfa-9676-39e0c1bc6f21_orig/400x280/0,0,2694,561/0/0/2374066ddfe63b0f/ 2x" >
+              
+            </div>
+          
+          
+        </div>
+        <div class="desktop-result-phone">
+          <h3 class="large-phone-font  no-margin">
+            
+            <a href="tel:5812345" data-event-name="Placed a call" data-event-what="link" title="Hringja í 581 2345">581 2345</a>
+          </h3>
+          
+          
+          
+            <div class="custom-button-container">
+              
+                <a
+                  class="button custom-button"
+                  href="https://www.dominos.is/panta/pizzur"
+                  target="_blank"
+                  style="color: #fff !important;
+                    background-color: #0073a9 !important;"
+                >
+                  Panta
+                </a>
+              
+            </div>
+          
+          
+            
+          
+        </div>
+      </div>
+      
+
+      <div class="desktop-result-header-sub-heading">
+        <div class="desktop-result-info-data">
+          <div class="desktop-result-name  ">
+            <h1 class="bold"> Domino&#x27;s Pizza</h1>
+          </div>
+          <div class="desktop-result-further-info">
+            
+              <p class="">
+                <a class="location address addressfield wait-for-tracking" href="/?q=%C3%81nanaustum%2015%2C%20101%20Reykjav%C3%ADk" title="Sjá fleiri skráða að Ánanaustum 15, 101 Reykjavík">
+                  Ánanaustum 15, 101 Reykjavík
+                </a>
+              </p>
+            
+
+            
+              
+                <p class=""> Kennitala: <span class="bold"> 480293-2669</span></p>
+              
+            
+            
+            
+              <div class="company-result-open-status border opening-hours-button tippy  "
+                   data-tippy-html="#hoursTemplate"
+                   data-tippy-interactive="true"
+                   data-tippy-placement="bottom-start"
+                   data-tippy-trigger="click focus"
+                   data-tippy-zindex="90"
+                   data-tippy-theme="white"
+                   data-tippy-animatefill="false"
+                   data-tippy-animation="fade"
+              >
+                
+                  <span class=" negative-circle  large"></span>
+                    <p class="no-margin">Lokað | Opnar 16:00</p>
+                  </span>
+                  <span class="arrow-down" />
+                
+              </div>
+              
+              
+
+
+    <div id="hoursTemplate" style="display: none;">
+      <table class='openinghours'>
+        
+        <tr class="opening-hour">
+          <td>
+            <span class="bold-time">
+              Fimmtudagur
+            </span>
+            <br/>
+            <span class="holiday-name">
+              
+            </span>
+          </td>
+          <td>
+            <span class="bold-time">
+              16:00 - 22:00
+            </span>
+            <br/>
+            <span class="holiday-text green-holiday">
+              
+            </span>
+          </td>
+        </tr>
+        
+        <tr class="opening-hour">
+          <td>
+            <span class="">
+              Föstudagur
+            </span>
+            <br/>
+            <span class="holiday-name">
+              
+            </span>
+          </td>
+          <td>
+            <span class="">
+              16:00 - 22:00
+            </span>
+            <br/>
+            <span class="holiday-text green-holiday">
+              
+            </span>
+          </td>
+        </tr>
+        
+        <tr class="opening-hour">
+          <td>
+            <span class="">
+              Laugardagur
+            </span>
+            <br/>
+            <span class="holiday-name">
+              
+            </span>
+          </td>
+          <td>
+            <span class="">
+              16:00 - 22:00
+            </span>
+            <br/>
+            <span class="holiday-text green-holiday">
+              
+            </span>
+          </td>
+        </tr>
+        
+        <tr class="opening-hour">
+          <td>
+            <span class="">
+              Sunnudagur
+            </span>
+            <br/>
+            <span class="holiday-name">
+              
+            </span>
+          </td>
+          <td>
+            <span class="">
+              16:00 - 22:00
+            </span>
+            <br/>
+            <span class="holiday-text green-holiday">
+              
+            </span>
+          </td>
+        </tr>
+        
+        <tr class="opening-hour">
+          <td>
+            <span class="">
+              Mánudagur
+            </span>
+            <br/>
+            <span class="holiday-name">
+              
+            </span>
+          </td>
+          <td>
+            <span class="">
+              16:00 - 22:00
+            </span>
+            <br/>
+            <span class="holiday-text green-holiday">
+              
+            </span>
+          </td>
+        </tr>
+        
+        <tr class="opening-hour">
+          <td>
+            <span class="">
+              Þriðjudagur
+            </span>
+            <br/>
+            <span class="holiday-name">
+              
+            </span>
+          </td>
+          <td>
+            <span class="">
+              16:00 - 22:00
+            </span>
+            <br/>
+            <span class="holiday-text green-holiday">
+              
+            </span>
+          </td>
+        </tr>
+        
+        <tr class="opening-hour">
+          <td>
+            <span class="">
+              Miðvikudagur
+            </span>
+            <br/>
+            <span class="holiday-name">
+              
+            </span>
+          </td>
+          <td>
+            <span class="">
+              16:00 - 22:00
+            </span>
+            <br/>
+            <span class="holiday-text green-holiday">
+              
+            </span>
+          </td>
+        </tr>
+        
+      </table>
+    </div>
+
+
+            
+            
+
+          </div>
+
+        </div>
+        <div class="desktop-result-info-container">
+          
+          <div class="desktop-result-info-data flex-row">
+            <div class="desktop-result-credit-info">
+              
+                
+                  <a class="company-badge" title="Creditinfo - Framúrskarandi fyrirtæki"
+                     target='_blank' href="https://www.creditinfo.is/framurskarandi/" rel="noopener nofollow">
+                    <img src="https://thumbs-cdn.ja.is/is-ja-stella/badges/creditinfo_2025_lodrett_a.png/174x174/0/0/0/3bf19df61d124732/" alt="Creditinfo - Framúrskarandi fyrirtæki">
+                  </a>
+                
+                
+              
+
+
+            </div>
+            <div class="desktop-result-info-list">
+              <!-- TODO: handle too many links -->
+                
+
+
+<ul class="desktop-result-info-list-container" aria-label="Upplýsingahlekkir">
+  
+    
+        <li >
+          <a target="_blank" rel="noopener nofollow"
+             href="https://www.dominos.is/"
+             class="icon icon-link"
+             data-event-name="Followed link" data-event-linktype="webpage"
+             data-event-what="link"
+             title="Fara á www.dominos.is"
+             
+             >www.dominos.is</a>
+        </li>
+    
+        <li >
+          <a target="_blank" rel="noopener nofollow"
+             href="https://www.facebook.com/Dominos.is"
+             class="icon icon-facebook"
+             data-event-name="Followed link" data-event-linktype="facebook"
+             data-event-what="link"
+             title="Skoða á Facebook"
+             
+             >Facebook</a>
+        </li>
+    
+        <li >
+          <a target="_blank" rel="noopener nofollow"
+             href="https://www.instagram.com/dominos_iceland/"
+             class="icon icon-instagram"
+             data-event-name="Followed link" data-event-linktype="instagram"
+             data-event-what="link"
+             title="Skoða á Instagram"
+             
+             >Instagram</a>
+        </li>
+    
+        <li >
+          <a target="_blank" rel="noopener nofollow"
+             href="https://www.linkedin.com/company/dominos-pizza-iceland"
+             class="icon icon-linkedin"
+             data-event-name="Followed link" data-event-linktype="linkedin"
+             data-event-what="link"
+             title="Skoða á LinkedIn"
+             
+             >LinkedIn</a>
+        </li>
+    
+        <li >
+          <a target="_blank" rel="noopener nofollow"
+             href="http://www.rsk.is/fyrirtaekjaskra/leit/kennitala/4802932669"
+             class="icon icon-rsk"
+             data-event-name="Followed link" data-event-linktype="rsk"
+             data-event-what="link"
+             title="Skoða í fyrirtækjaskrá"
+             
+             >Fyrirtækjaskrá</a>
+        </li>
+    
+        <li >
+          <a target="_blank" rel="noopener nofollow"
+             href="/vcard/9XMkg/"
+             class="icon icon-namecard"
+             data-event-name="Followed link" data-event-linktype="namecard"
+             data-event-what="link"
+             title="Sækja vCard nafnspjald"
+             
+             >Nafnspjald</a>
+        </li>
+    
+  
+</ul>
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="desktop-result-map"></div>
+    </div>
+    
+    <div class="maps">
+        
+
+
+
+<div class="map-container" >
+  <div class="map-container-map">
+    <a href="/kort/?d=hashid%3A9XMkg&amp;x=356117&amp;y=408739&amp;z=8&amp;type=map" class="wait-for-tracking"
+      data-event-name="Viewed map" data-event-what="image"
+      data-event-branch="true" id="info-map-app">
+      <info-map v-if="this.$mq !== 'small'" :lat="64.151179" :lon="-21.957483" :mobile="false"></info-map>
+    </a>
+  </div>
+  <div class="map-container-description">
+    <div>
+      <div class="map-address"> <span>Ánanaustum 15, 101 Reykjavík</span> </div>
+      <div class="map-logo icon icon-iceland-gray"> <span class="map-text no-margin">Já Kort</span> </div>
+    </div>
+    <div class="map-directions">
+        <a href="/kort/?d=hashid:9XMkg&amp;from=N%C3%BAverandi%20sta%C3%B0setning&amp;to=%C3%81nanaustum%2015%2C%20101%20Reykjav%C3%ADk"
+           class="icon icon-turn-right wait-for-tracking" title="Fá vegvísun"
+           data-event-name="Viewed directions" data-event-what="button"
+           data-event-branch="true">
+        </a>
+    </div>
+  </div>
+</div>
+
+
+<div class="map-container image-map">
+  <div class="map-container-map">
+    <a id="ja360wrap" href="/kort/?d=hashid%3A9XMkg&amp;x=356117&amp;y=408739&amp;z=8&amp;type=map&amp;ja360=1&amp;ji=3721393&amp;jh=147.22216091610994&amp;fov=80.0&amp;vlookat=-5.0" title="Skoða götumynd"
+      class="wait-for-tracking"
+      data-event-name="Viewed 360" data-event-what="image"
+      data-event-branch="true">
+      <img src="https://ja360-preview-cdn.ja.is/v1/3721393/920/460/-5.00/268.91/0.00/80/0/" alt="Já 360 götumynd">
+    </a>
+  </div>
+  <a class="map-container-description wait-for-tracking" href="/kort/?d=hashid%3A9XMkg&amp;x=356117&amp;y=408739&amp;z=8&amp;type=map&amp;ja360=1&amp;ji=3721393&amp;jh=147.22216091610994&amp;fov=80.0&amp;vlookat=-5.0" title="Skoða götumynd"
+      data-event-name="Viewed 360" data-event-what="image"
+      data-event-branch="true">
+    <div class="overlay"  style="flex-direction: row-reverse;">
+      <span class="icon icon-360"></span>
+    </div>
+  </a>
+</div>
+
+
+
+    </div>
+    
+
+
+    <div class="desktop-result-header-footer font-secondary-color">
+      <ja-improve-listing-button
+        name="Domino&#x27;s Pizza"
+        cluster="dominos"
+      ></ja-improve-listing-button>
+     
+    </div>
+
+  </div>
+
+        
+
+
+
+
+
+
+<div class="mobile-result-header">
+    
+    <div class="result-banner-image-container">
+      
+        <a href="http://www.dominos.is/"
+           target="_blank" rel="noopener nofollow" data-event-name="Followed link" data-event-linktype="webpage" data-event-what="banner">
+      
+        <img class="result-banner-image" src="https://thumbs-cdn.ja.is/is-ja-stella/images/9d97e704-4686-44a3-ae79-3ec9da6be791_orig/1018x360/0,397,5000,1768/0/0/4fbecb34af2b04e7/" alt="Domino&#x27;s Pizza">
+      
+        </a>
+      
+    </div>
+  
+
+  <div class="result-info-component result-info-component-main">
+    <div class="result-info-component-data pad-container">
+      <div class="info-header" style="display: flex; flex-direction: column; align-items: center;">
+        
+          <img class="mobile-result-logo" style="max-width:208px; max-height: 74px; margin-bottom: 24px;" src="https://thumbs-cdn.ja.is/is-ja-stella/images/3587c501-7a02-4cfa-9676-39e0c1bc6f21_orig/408x148/0,0,2694,561/0/0/893301d65daac42b/" alt="Domino&#x27;s Pizza">
+        
+        <h1 class="no-margin" style="font-size: 18px">Domino&#x27;s Pizza</h1>
+        
+      </div>
+      <div class="detail-contact-options" >
+        
+          
+            <div class="detail-contact-options-container">
+              <div class="detail-contact-message action-send-message">
+                
+                  <a class="action action-branded action-sms action-disabled"
+                    data-event-name="Followed link" data-event-linktype="sms" data-event-what="action button" data-event-mobile="true"
+                    >
+                  </a>
+                
+              </div>
+              <p class="detail-contact-options-text" >SMS</p>
+            </div>
+          
+        
+
+        <div class="detail-contact-options-container">
+          <div class="detail-contact-call action-call-number">
+            <a class="action action-big action-branded action-call"
+              data-event-name="Placed a call" data-event-what="action button" data-event-mobile="true"
+              
+                href="tel:5812345"
+                aria-label="Hringja"
+              >
+            </a>
+          </div>
+          <p class="detail-contact-options-text" >Hringja</p>
+        </div>
+
+        <div class="detail-contact-options-container">
+          <div class="detail-contact-email action-send-email">
+            <a class="action action-branded action-email action-disabled"
+              data-event-name="Followed link" data-event-linktype="email" data-event-what="action button" data-event-mobile="true"
+              >
+            </a>
+          </div>
+          <p class="detail-contact-options-text">Tölvupóstur</p>
+        </div>
+      </div>
+      
+        <div class="custom-button-container-mobile">
+          
+            <a
+              class="button custom-button"
+              href="https://www.dominos.is/panta/pizzur"
+              target="_blank"
+              style="color: #fff !important;
+                background-color: #0073a9 !important;"
+            >
+              Panta
+            </a>
+          
+        </div>
+      
+
+      
+      
+        <div class="result-info-opening-hours" id="opening-hours-button">
+          
+            <span class=" negative-circle  large"></span>
+            <span>Lokað | Opnar 16:00</span>
+          
+          <span class="arrow-down" />
+        </div>
+        
+
+        <div class="opening-hours-detail" id="opening-hours-detail" style="display: none;">
+          <div class="shadow-top"></div>
+          <table>
+            
+            <tr class="opening-hour">
+              <td>
+                <span class="bold-time">
+                  Fimmtudagur
+                </span>
+                <br/>
+                <span class="holiday-name">
+                  
+                </span>
+              </td>
+              <td>
+                <span class="">
+                  16:00 - 22:00
+                </span>
+                <br/>
+                <span class="holiday-text green-holiday">
+                  
+                </span>
+              </td>
+            </tr>
+            
+            <tr class="opening-hour">
+              <td>
+                <span class="">
+                  Föstudagur
+                </span>
+                <br/>
+                <span class="holiday-name">
+                  
+                </span>
+              </td>
+              <td>
+                <span class="">
+                  16:00 - 22:00
+                </span>
+                <br/>
+                <span class="holiday-text green-holiday">
+                  
+                </span>
+              </td>
+            </tr>
+            
+            <tr class="opening-hour">
+              <td>
+                <span class="">
+                  Laugardagur
+                </span>
+                <br/>
+                <span class="holiday-name">
+                  
+                </span>
+              </td>
+              <td>
+                <span class="">
+                  16:00 - 22:00
+                </span>
+                <br/>
+                <span class="holiday-text green-holiday">
+                  
+                </span>
+              </td>
+            </tr>
+            
+            <tr class="opening-hour">
+              <td>
+                <span class="">
+                  Sunnudagur
+                </span>
+                <br/>
+                <span class="holiday-name">
+                  
+                </span>
+              </td>
+              <td>
+                <span class="">
+                  16:00 - 22:00
+                </span>
+                <br/>
+                <span class="holiday-text green-holiday">
+                  
+                </span>
+              </td>
+            </tr>
+            
+            <tr class="opening-hour">
+              <td>
+                <span class="">
+                  Mánudagur
+                </span>
+                <br/>
+                <span class="holiday-name">
+                  
+                </span>
+              </td>
+              <td>
+                <span class="">
+                  16:00 - 22:00
+                </span>
+                <br/>
+                <span class="holiday-text green-holiday">
+                  
+                </span>
+              </td>
+            </tr>
+            
+            <tr class="opening-hour">
+              <td>
+                <span class="">
+                  Þriðjudagur
+                </span>
+                <br/>
+                <span class="holiday-name">
+                  
+                </span>
+              </td>
+              <td>
+                <span class="">
+                  16:00 - 22:00
+                </span>
+                <br/>
+                <span class="holiday-text green-holiday">
+                  
+                </span>
+              </td>
+            </tr>
+            
+            <tr class="opening-hour">
+              <td>
+                <span class="">
+                  Miðvikudagur
+                </span>
+                <br/>
+                <span class="holiday-name">
+                  
+                </span>
+              </td>
+              <td>
+                <span class="">
+                  16:00 - 22:00
+                </span>
+                <br/>
+                <span class="holiday-text green-holiday">
+                  
+                </span>
+              </td>
+            </tr>
+            
+          </table>
+          <div class="shadow-bottom"></div>
+        </div>
+      
+      
+
+      <ul class="result-basic-info-list">
+        
+          <li class="result-basic-info-list-item">
+            <div class="result-basic-info-list-item-data">
+              <h3> Heimilisfang </h3>
+              <a class="no-margin"
+                data-event-name="Placed a call" data-event-what="link" data-event-mobile="true"
+                href="tel:5812345">Ánanaustum 15</a>
+            </div>
+          </li>
+        
+        
+          <li class="result-basic-info-list-item">
+            <div class="result-basic-info-list-item-data">
+              <h3> Staður </h3>
+              <a class="no-margin"
+                data-event-name="Placed a call" data-event-what="link" data-event-mobile="true"
+                href="tel:5812345"> 101 Reykjavík </a>
+            </div>
+          </li>
+        
+        
+        
+          <li class="result-basic-info-list-item">
+            <div class="result-basic-info-list-item-data">
+              <h3> Sími </h3>
+              <a class=" no-margin"
+                data-event-name="Placed a call" data-event-what="link" data-event-mobile="true"
+                href="tel:5812345">581 2345</a>
+            </div>
+          </li>
+        
+        
+        
+          <li class="result-basic-info-list-item">
+            <div class="result-basic-info-list-item-data">
+              <h3> Vefsíða </h3>
+              <a class="no-margin" target="_blank" href="https://www.dominos.is/" rel="noopener nofollow"
+                  data-event-name="Followed link" data-event-linktype="webpage" data-event-what="link">
+                  www.dominos.is
+                </a>
+            </div>
+          </li>
+        
+        
+        
+          
+            <li class="result-basic-info-list-item">
+              <div class="result-basic-info-list-item-data">
+                <h3>Samfélagsmiðlar</h3>
+                <div class="social-media-icons">
+                  
+                    <a target="_blank" rel="noopener nofollow"
+                      href="https://www.facebook.com/Dominos.is"
+                      class="icon icon-facebook"
+                      data-event-name="Followed link" data-event-linktype="facebook"
+                      data-event-what="icon"
+                      title="Skoða á Facebook"
+                      ></a>
+                  
+                    <a target="_blank" rel="noopener nofollow"
+                      href="https://www.instagram.com/dominos_iceland/"
+                      class="icon icon-instagram"
+                      data-event-name="Followed link" data-event-linktype="instagram"
+                      data-event-what="icon"
+                      title="Skoða á Instagram"
+                      ></a>
+                  
+                    <a target="_blank" rel="noopener nofollow"
+                      href="https://www.linkedin.com/company/dominos-pizza-iceland"
+                      class="icon icon-linkedin"
+                      data-event-name="Followed link" data-event-linktype="linkedin"
+                      data-event-what="icon"
+                      title="Skoða á LinkedIn"
+                      ></a>
+                  
+                </div>
+              </div>
+            </li>
+          
+        
+        
+          <li class="result-basic-info-list-item">
+            <div class="result-basic-info-list-item-data">
+              <h3>Kennitala</h3>
+              <p class="no-margin" >480293-2669</p>
+            </div>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+  <div class="result-info-component mobile-map" >
+    <div class="result-info-component-data  mobile-map-component ">
+      <div class="map-container" >
+        <div class="map-container-map">
+          <a class="wait-for-tracking mapwrap-mobile" href="/kort/?d=hashid%3A9XMkg&amp;x=356117&amp;y=408739&amp;z=8&amp;type=map"
+            data-event-name="Viewed map" data-event-what="image"
+            style="background-image: url();"
+            title="Skoða kort" id="mobile-info-map-app">
+            <info-map-mobile v-if="this.$mq === 'small'" :lat="64.151179" :lon="-21.957483" :mobile="true"></info-map-mobile>
+            <div class="mobile-map-overlay">
+              <div class="adress icon icon-iceland">
+                Ánanaustum 15 <br>101 Reykjavík
+              </div>
+              <div class="directions mobile-map-button">
+                <a class="action action-mapbox wait-for-tracking"
+                  data-event-name="Viewed directions"
+                  data-event-what="action button"
+                  href="/kort/?d=hashid:9XMkg&amp;from=N%C3%BAverandi%20sta%C3%B0setning&amp;to=%C3%81nanaustum%2015%2C%20101%20Reykjav%C3%ADk"
+                  title="Fá vegvísun"><i class="icon icon-turn-right"></i></a>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+        <div class="map-container image-map" >
+          <div class="map-container-map">
+              <a class="wait-for-tracking mapwrap-mobile" href="/kort/?d=hashid%3A9XMkg&amp;x=356117&amp;y=408739&amp;z=8&amp;type=map&amp;ja360=1&amp;ji=3721393&amp;jh=147.22216091610994&amp;fov=80.0&amp;vlookat=-5.0"
+              data-event-name="Viewed 360" data-event-what="image"
+              title="Skoða götumynd">
+              <img id="map-mobile-360" src="https://ja360-preview-cdn.ja.is/v1/3721393/920/460/-5.00/268.91/0.00/80/0/" alt="Já 360">
+              
+            </a>
+          </div>
+          <div class="map-container-description">
+            <div class="mobile-map-overlay">
+              <a class="mobile-map-button" href="/kort/?d=hashid%3A9XMkg&amp;x=356117&amp;y=408739&amp;z=8&amp;type=map&amp;ja360=1&amp;ji=3721393&amp;jh=147.22216091610994&amp;fov=80.0&amp;vlookat=-5.0" title="Skoða götumynd"><span class="icon icon-360 icon-center"></span></a>
+              <a class="mobile-map-button" href="/kort/?d=hashid%3A9XMkg&amp;x=356117&amp;y=408739&amp;z=8&amp;type=map&amp;ja360=1&amp;ji=3721393&amp;jh=147.22216091610994&amp;fov=80.0&amp;vlookat=-5.0" title="Skoða götumynd"><span class="icon icon-big icon-center"></span></a>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+  
+
+  
+    
+
+    <a class="company-badge" title="Creditinfo - Framúrskarandi fyrirtæki"
+      target='_blank' href="https://www.creditinfo.is/framurskarandi/" rel="noopener">
+      <img class="mobile-badge-image" src="https://thumbs-cdn.ja.is/is-ja-stella/badges/creditinfo_2025_larett.png/700x200/0/0/0/4d8d635ca2824d15/" alt="Creditinfo - Framúrskarandi fyrirtæki" >
+    </a>
+
+  
+
+
+  <div class="result-info-component links-container" >
+    <div class="result-info-component-data links">
+      <a href="/vcard/9XMkg/"
+        data-event-name="Saved Contact Info" rel="nofollow"
+        title="Sækja vCard nafnspjald">Vista sem tengilið</a>
+      
+        <a target="_blank" data-event-name="Clicked on RSK" rel="nofollow noopener"
+          href="http://www.rsk.is/fyrirtaekjaskra/leit/kennitala/4802932669">
+          Fyrirtækjaskrá
+        </a>
+      
+      <ja-improve-listing-button
+        name="Domino&#x27;s Pizza"
+        cluster="dominos"
+      ></ja-improve-listing-button>
+    </div>
+  </div>
+</div>
+
+
+        
+
+        
+
+        
+          
+
+
+<div class="result-info-component">
+  <div id="AdrarSkraningar" class="result-info-component-header collapsible-icon-minus collapsible-header"
+       data-collapse-status="true"
+       aria-expanded="true">
+    <h3> Aðrar skráningar</h3>
+  </div>
+  <div class="result-info-component-data">
+    <ul class="other-registration-list"
+      
+        data-index="5"
+      
+      aria-label="Aðrar skráningar"
+    >
+      
+        
+          
+
+
+
+<li class="other-registration-list-item">
+  <a data-name-id="437513" class="row list-item wait-for-tracking branch"
+      
+        href="/dominos/"
+      
+      data-event-name="Clicked on branch">
+
+    <div class="other-registration-item">
+      <div class="other-registration-info">
+        <div class="comany-result-name">
+          <h5 class="no-margin bold">Domino&#x27;s Pizza</h5>
+        </div>
+        <div class="company-result-address">
+          
+            &#8203; 
+          
+        </div>
+      </div>
+      <div class="other-registration-opening-hours">
+        
+      </div>
+      <div class="other-registration-arrow">
+        
+          <div class="other-registration-telephone hide-on-mobile">
+            <ul>
+              <li>
+                
+                  <span>581 2345</span>
+                
+              </li>
+              
+            </ul>
+          </div>
+        
+        <span 
+             href="/dominos/"
+           
+           class="arrow">
+        </span>
+      </div>
+    </div>
+  </a>
+</li>
+
+
+
+        
+      
+        
+          
+
+
+
+<li class="other-registration-list-item">
+  <a data-name-id="1514338" class="row list-item wait-for-tracking branch"
+      
+        href="/dominos/JZdRx/"
+      
+      data-event-name="Clicked on branch">
+
+    <div class="other-registration-item">
+      <div class="other-registration-info">
+        <div class="comany-result-name">
+          <h5 class="no-margin bold">Domino&#x27;s Pizza</h5>
+        </div>
+        <div class="company-result-address">
+          
+            Skúlagötu 17, 101 Reykjavík
+          
+        </div>
+      </div>
+      <div class="other-registration-opening-hours">
+        
+          <div class="company-result-open-status">
+            <span class=" positive-circle  large"></span>
+            <span class="open-text">
+              
+                
+                  Opið til 00:00
+                
+              
+            </span>
+          </div>
+        
+      </div>
+      <div class="other-registration-arrow">
+        
+          <div class="other-registration-telephone hide-on-mobile">
+            <ul>
+              <li>
+                
+                  <span>581 2345</span>
+                
+              </li>
+              
+            </ul>
+          </div>
+        
+        <span 
+             href="/dominos/JZdRx/"
+           
+           class="arrow">
+        </span>
+      </div>
+    </div>
+  </a>
+</li>
+
+
+
+        
+      
+        
+          
+
+
+
+<li class="other-registration-list-item">
+  <a data-name-id="1728561" class="row list-item wait-for-tracking branch"
+      
+        href="/dominos/kr1qE/"
+      
+      data-event-name="Clicked on branch">
+
+    <div class="other-registration-item">
+      <div class="other-registration-info">
+        <div class="comany-result-name">
+          <h5 class="no-margin bold">Domino&#x27;s Pizza</h5>
+        </div>
+        <div class="company-result-address">
+          
+            Dalbraut 3, 105 Reykjavík
+          
+        </div>
+      </div>
+      <div class="other-registration-opening-hours">
+        
+          <div class="company-result-open-status">
+            <span class=" positive-circle  large"></span>
+            <span class="open-text">
+              
+                
+                  Opið til 22:00
+                
+              
+            </span>
+          </div>
+        
+      </div>
+      <div class="other-registration-arrow">
+        
+          <div class="other-registration-telephone hide-on-mobile">
+            <ul>
+              <li>
+                
+                  <span>581 2345</span>
+                
+              </li>
+              
+            </ul>
+          </div>
+        
+        <span 
+             href="/dominos/kr1qE/"
+           
+           class="arrow">
+        </span>
+      </div>
+    </div>
+  </a>
+</li>
+
+
+
+        
+      
+        
+          
+
+
+
+<li class="other-registration-list-item">
+  <a data-name-id="1817237" class="row list-item wait-for-tracking branch"
+      
+        href="/dominos/yXXEL/"
+      
+      data-event-name="Clicked on branch">
+
+    <div class="other-registration-item">
+      <div class="other-registration-info">
+        <div class="comany-result-name">
+          <h5 class="no-margin bold">Domino&#x27;s Pizza</h5>
+        </div>
+        <div class="company-result-address">
+          
+            Nóatúni 17, 105 Reykjavík
+          
+        </div>
+      </div>
+      <div class="other-registration-opening-hours">
+        
+          <div class="company-result-open-status">
+            <span class=" negative-circle  large"></span>
+            <span class="open-text">
+              
+                
+                  Lokað | Opnar 16:00
+                
+              
+            </span>
+          </div>
+        
+      </div>
+      <div class="other-registration-arrow">
+        
+          <div class="other-registration-telephone hide-on-mobile">
+            <ul>
+              <li>
+                
+                  <span>581 2345</span>
+                
+              </li>
+              
+            </ul>
+          </div>
+        
+        <span 
+             href="/dominos/yXXEL/"
+           
+           class="arrow">
+        </span>
+      </div>
+    </div>
+  </a>
+</li>
+
+
+
+        
+      
+        
+          
+
+
+
+<li class="other-registration-list-item">
+  <a data-name-id="1514331" class="row list-item wait-for-tracking branch"
+      
+        href="/dominos/o32Rj/"
+      
+      data-event-name="Clicked on branch">
+
+    <div class="other-registration-item">
+      <div class="other-registration-info">
+        <div class="comany-result-name">
+          <h5 class="no-margin bold">Domino&#x27;s Pizza</h5>
+        </div>
+        <div class="company-result-address">
+          
+            Hjarðarhaga 51, 107 Reykjavík
+          
+        </div>
+      </div>
+      <div class="other-registration-opening-hours">
+        
+          <div class="company-result-open-status">
+            <span class=" positive-circle  large"></span>
+            <span class="open-text">
+              
+                
+                  Opið til 00:00
+                
+              
+            </span>
+          </div>
+        
+      </div>
+      <div class="other-registration-arrow">
+        
+          <div class="other-registration-telephone hide-on-mobile">
+            <ul>
+              <li>
+                
+                  <span>581 2345</span>
+                
+              </li>
+              
+            </ul>
+          </div>
+        
+        <span 
+             href="/dominos/o32Rj/"
+           
+           class="arrow">
+        </span>
+      </div>
+    </div>
+  </a>
+</li>
+
+
+
+        
+      
+        
+          
+
+
+
+<li class="other-registration-list-item">
+  <a data-name-id="1228765" class="row list-item wait-for-tracking branch"
+      
+        href="/dominos/R5b56/"
+      
+      data-event-name="Clicked on branch">
+
+    <div class="other-registration-item">
+      <div class="other-registration-info">
+        <div class="comany-result-name">
+          <h5 class="no-margin bold">Dominos Pizza</h5>
+        </div>
+        <div class="company-result-address">
+          
+            Skeifunni 17, 108 Reykjavík
+          
+        </div>
+      </div>
+      <div class="other-registration-opening-hours">
+        
+          <div class="company-result-open-status">
+            <span class=" positive-circle  large"></span>
+            <span class="open-text">
+              
+                
+                  Opið til 01:00
+                
+              
+            </span>
+          </div>
+        
+      </div>
+      <div class="other-registration-arrow">
+        
+          <div class="other-registration-telephone hide-on-mobile">
+            <ul>
+              <li>
+                
+                  <span>581 2345</span>
+                
+              </li>
+              
+            </ul>
+          </div>
+        
+        <span 
+             href="/dominos/R5b56/"
+           
+           class="arrow">
+        </span>
+      </div>
+    </div>
+  </a>
+</li>
+
+
+
+        
+      
+        
+          
+
+
+
+<li class="other-registration-list-item">
+  <a data-name-id="1704935" class="row list-item wait-for-tracking branch"
+      
+        href="/dominos/L5oDP/"
+      
+      data-event-name="Clicked on branch">
+
+    <div class="other-registration-item">
+      <div class="other-registration-info">
+        <div class="comany-result-name">
+          <h5 class="no-margin bold">Domino&#x27;s Pizza</h5>
+        </div>
+        <div class="company-result-address">
+          
+            Hraunbæ 121, 110 Reykjavík
+          
+        </div>
+      </div>
+      <div class="other-registration-opening-hours">
+        
+          <div class="company-result-open-status">
+            <span class=" positive-circle  large"></span>
+            <span class="open-text">
+              
+                
+                  Opið til 00:00
+                
+              
+            </span>
+          </div>
+        
+      </div>
+      <div class="other-registration-arrow">
+        
+          <div class="other-registration-telephone hide-on-mobile">
+            <ul>
+              <li>
+                
+                  <span>581 2345</span>
+                
+              </li>
+              
+            </ul>
+          </div>
+        
+        <span 
+             href="/dominos/L5oDP/"
+           
+           class="arrow">
+        </span>
+      </div>
+    </div>
+  </a>
+</li>
+
+
+
+        
+      
+        
+          
+
+
+
+<li class="other-registration-list-item">
+  <a data-name-id="1514337" class="row list-item wait-for-tracking branch"
+      
+        href="/dominos/yb7o2/"
+      
+      data-event-name="Clicked on branch">
+
+    <div class="other-registration-item">
+      <div class="other-registration-info">
+        <div class="comany-result-name">
+          <h5 class="no-margin bold">Domino&#x27;s Pizza</h5>
+        </div>
+        <div class="company-result-address">
+          
+            Lóuhólum 2-6, 111 Reykjavík
+          
+        </div>
+      </div>
+      <div class="other-registration-opening-hours">
+        
+          <div class="company-result-open-status">
+            <span class=" positive-circle  large"></span>
+            <span class="open-text">
+              
+                
+                  Opið til 00:00
+                
+              
+            </span>
+          </div>
+        
+      </div>
+      <div class="other-registration-arrow">
+        
+          <div class="other-registration-telephone hide-on-mobile">
+            <ul>
+              <li>
+                
+                  <span>581 2345</span>
+                
+              </li>
+              
+            </ul>
+          </div>
+        
+        <span 
+             href="/dominos/yb7o2/"
+           
+           class="arrow">
+        </span>
+      </div>
+    </div>
+  </a>
+</li>
+
+
+
+        
+      
+        
+          
+
+
+
+<li class="other-registration-list-item">
+  <a data-name-id="1400975" class="row list-item wait-for-tracking branch"
+      
+        href="/dominos/obDla/"
+      
+      data-event-name="Clicked on branch">
+
+    <div class="other-registration-item">
+      <div class="other-registration-info">
+        <div class="comany-result-name">
+          <h5 class="no-margin bold">Skrifstofa Dominos</h5>
+        </div>
+        <div class="company-result-address">
+          
+            Lóuhólum 2-6, 111 Reykjavík
+          
+        </div>
+      </div>
+      <div class="other-registration-opening-hours">
+        
+          <div class="company-result-open-status">
+            <span class=" positive-circle  large"></span>
+            <span class="open-text">
+              
+                
+                  Opið til 16:00
+                
+              
+            </span>
+          </div>
+        
+      </div>
+      <div class="other-registration-arrow">
+        
+          <div class="other-registration-telephone hide-on-mobile">
+            <ul>
+              <li>
+                
+                  <span>585 0800</span>
+                
+              </li>
+              
+            </ul>
+          </div>
+        
+        <span 
+             href="/dominos/obDla/"
+           
+           class="arrow">
+        </span>
+      </div>
+    </div>
+  </a>
+</li>
+
+
+
+        
+      
+        
+          
+
+
+
+<li class="other-registration-list-item">
+  <a data-name-id="1514334" class="row list-item wait-for-tracking branch"
+      
+        href="/dominos/PP7xP/"
+      
+      data-event-name="Clicked on branch">
+
+    <div class="other-registration-item">
+      <div class="other-registration-info">
+        <div class="comany-result-name">
+          <h5 class="no-margin bold">Domino&#x27;s Pizza</h5>
+        </div>
+        <div class="company-result-address">
+          
+            Spönginni 17, 112 Reykjavík
+          
+        </div>
+      </div>
+      <div class="other-registration-opening-hours">
+        
+          <div class="company-result-open-status">
+            <span class=" positive-circle  large"></span>
+            <span class="open-text">
+              
+                
+                  Opið til 00:00
+                
+              
+            </span>
+          </div>
+        
+      </div>
+      <div class="other-registration-arrow">
+        
+          <div class="other-registration-telephone hide-on-mobile">
+            <ul>
+              <li>
+                
+                  <span>581 2345</span>
+                
+              </li>
+              
+            </ul>
+          </div>
+        
+        <span 
+             href="/dominos/PP7xP/"
+           
+           class="arrow">
+        </span>
+      </div>
+    </div>
+  </a>
+</li>
+
+
+
+        
+      
+        
+          
+
+
+
+<li class="other-registration-list-item">
+  <a data-name-id="1514335" class="row list-item wait-for-tracking branch"
+      
+        href="/dominos/LZj91/"
+      
+      data-event-name="Clicked on branch">
+
+    <div class="other-registration-item">
+      <div class="other-registration-info">
+        <div class="comany-result-name">
+          <h5 class="no-margin bold">Domino&#x27;s Pizza</h5>
+        </div>
+        <div class="company-result-address">
+          
+            Nýbýlavegi 14, 200 Kópavogi
+          
+        </div>
+      </div>
+      <div class="other-registration-opening-hours">
+        
+          <div class="company-result-open-status">
+            <span class=" positive-circle  large"></span>
+            <span class="open-text">
+              
+                
+                  Opið til 00:00
+                
+              
+            </span>
+          </div>
+        
+      </div>
+      <div class="other-registration-arrow">
+        
+          <div class="other-registration-telephone hide-on-mobile">
+            <ul>
+              <li>
+                
+                  <span>581 2345</span>
+                
+              </li>
+              
+            </ul>
+          </div>
+        
+        <span 
+             href="/dominos/LZj91/"
+           
+           class="arrow">
+        </span>
+      </div>
+    </div>
+  </a>
+</li>
+
+
+
+        
+      
+        
+          
+
+
+
+<li class="other-registration-list-item">
+  <a data-name-id="1514339" class="row list-item wait-for-tracking branch"
+      
+        href="/dominos/DjnbY/"
+      
+      data-event-name="Clicked on branch">
+
+    <div class="other-registration-item">
+      <div class="other-registration-info">
+        <div class="comany-result-name">
+          <h5 class="no-margin bold">Domino&#x27;s Pizza</h5>
+        </div>
+        <div class="company-result-address">
+          
+            Rjúpnasölum 1, 201 Kópavogi
+          
+        </div>
+      </div>
+      <div class="other-registration-opening-hours">
+        
+          <div class="company-result-open-status">
+            <span class=" negative-circle  large"></span>
+            <span class="open-text">
+              
+                
+                  Lokað | Opnar 16:00
+                
+              
+            </span>
+          </div>
+        
+      </div>
+      <div class="other-registration-arrow">
+        
+          <div class="other-registration-telephone hide-on-mobile">
+            <ul>
+              <li>
+                
+                  <span>581 2345</span>
+                
+              </li>
+              
+            </ul>
+          </div>
+        
+        <span 
+             href="/dominos/DjnbY/"
+           
+           class="arrow">
+        </span>
+      </div>
+    </div>
+  </a>
+</li>
+
+
+
+        
+      
+        
+          
+
+
+
+<li class="other-registration-list-item">
+  <a data-name-id="1817238" class="row list-item wait-for-tracking branch"
+      
+        href="/dominos/JxxlV/"
+      
+      data-event-name="Clicked on branch">
+
+    <div class="other-registration-item">
+      <div class="other-registration-info">
+        <div class="comany-result-name">
+          <h5 class="no-margin bold">Domino&#x27;s Pizza</h5>
+        </div>
+        <div class="company-result-address">
+          
+            Skógarlind 2, 201 Kópavogi
+          
+        </div>
+      </div>
+      <div class="other-registration-opening-hours">
+        
+          <div class="company-result-open-status">
+            <span class=" positive-circle  large"></span>
+            <span class="open-text">
+              
+                
+                  Opið til 22:00
+                
+              
+            </span>
+          </div>
+        
+      </div>
+      <div class="other-registration-arrow">
+        
+          <div class="other-registration-telephone hide-on-mobile">
+            <ul>
+              <li>
+                
+                  <span>581 2345</span>
+                
+              </li>
+              
+            </ul>
+          </div>
+        
+        <span 
+             href="/dominos/JxxlV/"
+           
+           class="arrow">
+        </span>
+      </div>
+    </div>
+  </a>
+</li>
+
+
+
+        
+      
+        
+          
+
+
+
+<li class="other-registration-list-item">
+  <a data-name-id="1514327" class="row list-item wait-for-tracking branch"
+      
+        href="/dominos/x24p1/"
+      
+      data-event-name="Clicked on branch">
+
+    <div class="other-registration-item">
+      <div class="other-registration-info">
+        <div class="comany-result-name">
+          <h5 class="no-margin bold">Domino&#x27;s Pizza</h5>
+        </div>
+        <div class="company-result-address">
+          
+            Garðatorgi 7, 210 Garðabæ
+          
+        </div>
+      </div>
+      <div class="other-registration-opening-hours">
+        
+          <div class="company-result-open-status">
+            <span class=" positive-circle  large"></span>
+            <span class="open-text">
+              
+                
+                  Opið til 22:00
+                
+              
+            </span>
+          </div>
+        
+      </div>
+      <div class="other-registration-arrow">
+        
+          <div class="other-registration-telephone hide-on-mobile">
+            <ul>
+              <li>
+                
+                  <span>581 2345</span>
+                
+              </li>
+              
+            </ul>
+          </div>
+        
+        <span 
+             href="/dominos/x24p1/"
+           
+           class="arrow">
+        </span>
+      </div>
+    </div>
+  </a>
+</li>
+
+
+
+        
+      
+        
+          
+
+
+
+<li class="other-registration-list-item">
+  <a data-name-id="1772509" class="row list-item wait-for-tracking branch"
+      
+        href="/dominos/v5RN4/"
+      
+      data-event-name="Clicked on branch">
+
+    <div class="other-registration-item">
+      <div class="other-registration-info">
+        <div class="comany-result-name">
+          <h5 class="no-margin bold">Dominos Pizza</h5>
+        </div>
+        <div class="company-result-address">
+          
+            Flatahrauni 13, 220 Hafnarfirði
+          
+        </div>
+      </div>
+      <div class="other-registration-opening-hours">
+        
+          <div class="company-result-open-status">
+            <span class=" positive-circle  large"></span>
+            <span class="open-text">
+              
+                
+                  Opið til 00:00
+                
+              
+            </span>
+          </div>
+        
+      </div>
+      <div class="other-registration-arrow">
+        
+          <div class="other-registration-telephone hide-on-mobile">
+            <ul>
+              <li>
+                
+                  <span>581 2345</span>
+                
+              </li>
+              
+            </ul>
+          </div>
+        
+        <span 
+             href="/dominos/v5RN4/"
+           
+           class="arrow">
+        </span>
+      </div>
+    </div>
+  </a>
+</li>
+
+
+
+        
+      
+        
+          
+
+
+
+<li class="other-registration-list-item">
+  <a data-name-id="1832802" class="row list-item wait-for-tracking branch"
+      
+        href="/dominos/GxVr9/"
+      
+      data-event-name="Clicked on branch">
+
+    <div class="other-registration-item">
+      <div class="other-registration-info">
+        <div class="comany-result-name">
+          <h5 class="no-margin bold">Dominos Pizza</h5>
+        </div>
+        <div class="company-result-address">
+          
+            Tjarnarvöllum 3, 221 Hafnarfirði
+          
+        </div>
+      </div>
+      <div class="other-registration-opening-hours">
+        
+          <div class="company-result-open-status">
+            <span class=" positive-circle  large"></span>
+            <span class="open-text">
+              
+                
+                  Opið til 22:00
+                
+              
+            </span>
+          </div>
+        
+      </div>
+      <div class="other-registration-arrow">
+        
+          <div class="other-registration-telephone hide-on-mobile">
+            <ul>
+              <li>
+                
+                  <span>581 2345</span>
+                
+              </li>
+              
+            </ul>
+          </div>
+        
+        <span 
+             href="/dominos/GxVr9/"
+           
+           class="arrow">
+        </span>
+      </div>
+    </div>
+  </a>
+</li>
+
+
+
+        
+      
+        
+          
+
+
+
+<li class="other-registration-list-item">
+  <a data-name-id="924805" class="row list-item wait-for-tracking branch"
+      
+        href="/dominos/3E4g4/"
+      
+      data-event-name="Clicked on branch">
+
+    <div class="other-registration-item">
+      <div class="other-registration-info">
+        <div class="comany-result-name">
+          <h5 class="no-margin bold">Domino&#x27;s Pizza</h5>
+        </div>
+        <div class="company-result-address">
+          
+            Hafnargötu 86, 230 Reykjanesbæ
+          
+        </div>
+      </div>
+      <div class="other-registration-opening-hours">
+        
+          <div class="company-result-open-status">
+            <span class=" positive-circle  large"></span>
+            <span class="open-text">
+              
+                
+                  Opið til 00:00
+                
+              
+            </span>
+          </div>
+        
+      </div>
+      <div class="other-registration-arrow">
+        
+          <div class="other-registration-telephone hide-on-mobile">
+            <ul>
+              <li>
+                
+                  <span>581 2345</span>
+                
+              </li>
+              
+            </ul>
+          </div>
+        
+        <span 
+             href="/dominos/3E4g4/"
+           
+           class="arrow">
+        </span>
+      </div>
+    </div>
+  </a>
+</li>
+
+
+
+        
+      
+        
+          
+
+
+
+<li class="other-registration-list-item">
+  <a data-name-id="1807833" class="row list-item wait-for-tracking branch"
+      
+        href="/dominos/q6oY4/"
+      
+      data-event-name="Clicked on branch">
+
+    <div class="other-registration-item">
+      <div class="other-registration-info">
+        <div class="comany-result-name">
+          <h5 class="no-margin bold">Domino&#x27;s Pizza</h5>
+        </div>
+        <div class="company-result-address">
+          
+            Fitjum 2, 260 Reykjanesbæ
+          
+        </div>
+      </div>
+      <div class="other-registration-opening-hours">
+        
+          <div class="company-result-open-status">
+            <span class=" negative-circle  large"></span>
+            <span class="open-text">
+              
+                
+                  Lokað | Opnar 16:00
+                
+              
+            </span>
+          </div>
+        
+      </div>
+      <div class="other-registration-arrow">
+        
+          <div class="other-registration-telephone hide-on-mobile">
+            <ul>
+              <li>
+                
+                  <span>581 2345</span>
+                
+              </li>
+              
+            </ul>
+          </div>
+        
+        <span 
+             href="/dominos/q6oY4/"
+           
+           class="arrow">
+        </span>
+      </div>
+    </div>
+  </a>
+</li>
+
+
+
+        
+      
+        
+          
+
+
+
+<li class="other-registration-list-item">
+  <a data-name-id="1658387" class="row list-item wait-for-tracking branch"
+      
+        href="/dominos/9PqG6/"
+      
+      data-event-name="Clicked on branch">
+
+    <div class="other-registration-item">
+      <div class="other-registration-info">
+        <div class="comany-result-name">
+          <h5 class="no-margin bold">Domino&#x27;s Pizza</h5>
+        </div>
+        <div class="company-result-address">
+          
+            Háholti 14, 270 Mosfellsbæ
+          
+        </div>
+      </div>
+      <div class="other-registration-opening-hours">
+        
+          <div class="company-result-open-status">
+            <span class=" positive-circle  large"></span>
+            <span class="open-text">
+              
+                
+                  Opið til 22:00
+                
+              
+            </span>
+          </div>
+        
+      </div>
+      <div class="other-registration-arrow">
+        
+          <div class="other-registration-telephone hide-on-mobile">
+            <ul>
+              <li>
+                
+                  <span>581 2345</span>
+                
+              </li>
+              
+            </ul>
+          </div>
+        
+        <span 
+             href="/dominos/9PqG6/"
+           
+           class="arrow">
+        </span>
+      </div>
+    </div>
+  </a>
+</li>
+
+
+
+        
+      
+        
+          
+
+
+
+<li class="other-registration-list-item">
+  <a data-name-id="1514341" class="row list-item wait-for-tracking branch"
+      
+        href="/dominos/aqrVn/"
+      
+      data-event-name="Clicked on branch">
+
+    <div class="other-registration-item">
+      <div class="other-registration-info">
+        <div class="comany-result-name">
+          <h5 class="no-margin bold">Domino&#x27;s Pizza</h5>
+        </div>
+        <div class="company-result-address">
+          
+            Smiðjuvöllum 32, 300 Akranesi
+          
+        </div>
+      </div>
+      <div class="other-registration-opening-hours">
+        
+          <div class="company-result-open-status">
+            <span class=" negative-circle  large"></span>
+            <span class="open-text">
+              
+                
+                  Lokað | Opnar 16:00
+                
+              
+            </span>
+          </div>
+        
+      </div>
+      <div class="other-registration-arrow">
+        
+          <div class="other-registration-telephone hide-on-mobile">
+            <ul>
+              <li>
+                
+                  <span>581 2345</span>
+                
+              </li>
+              
+            </ul>
+          </div>
+        
+        <span 
+             href="/dominos/aqrVn/"
+           
+           class="arrow">
+        </span>
+      </div>
+    </div>
+  </a>
+</li>
+
+
+
+        
+      
+        
+          
+
+
+
+<li class="other-registration-list-item">
+  <a data-name-id="1292149" class="row list-item wait-for-tracking branch"
+      
+        href="/dominos/3wgZv/"
+      
+      data-event-name="Clicked on branch">
+
+    <div class="other-registration-item">
+      <div class="other-registration-info">
+        <div class="comany-result-name">
+          <h5 class="no-margin bold">Domino&#x27;s Pizza</h5>
+        </div>
+        <div class="company-result-address">
+          
+            Undirhlíð 2, 603 Akureyri
+          
+        </div>
+      </div>
+      <div class="other-registration-opening-hours">
+        
+          <div class="company-result-open-status">
+            <span class=" positive-circle  large"></span>
+            <span class="open-text">
+              
+                
+                  Opið til 22:00
+                
+              
+            </span>
+          </div>
+        
+      </div>
+      <div class="other-registration-arrow">
+        
+          <div class="other-registration-telephone hide-on-mobile">
+            <ul>
+              <li>
+                
+                  <span>581 2345</span>
+                
+              </li>
+              
+            </ul>
+          </div>
+        
+        <span 
+             href="/dominos/3wgZv/"
+           
+           class="arrow">
+        </span>
+      </div>
+    </div>
+  </a>
+</li>
+
+
+
+        
+      
+        
+          
+
+
+
+<li class="other-registration-list-item">
+  <a data-name-id="1704936" class="row list-item wait-for-tracking branch"
+      
+        href="/dominos/O2DkR/"
+      
+      data-event-name="Clicked on branch">
+
+    <div class="other-registration-item">
+      <div class="other-registration-info">
+        <div class="comany-result-name">
+          <h5 class="no-margin bold">Domino&#x27;s Pizza</h5>
+        </div>
+        <div class="company-result-address">
+          
+            Eyravegi 2, 800 Selfossi
+          
+        </div>
+      </div>
+      <div class="other-registration-opening-hours">
+        
+          <div class="company-result-open-status">
+            <span class=" positive-circle  large"></span>
+            <span class="open-text">
+              
+                
+                  Opið til 22:00
+                
+              
+            </span>
+          </div>
+        
+      </div>
+      <div class="other-registration-arrow">
+        
+          <div class="other-registration-telephone hide-on-mobile">
+            <ul>
+              <li>
+                
+                  <span>581 2345</span>
+                
+              </li>
+              
+            </ul>
+          </div>
+        
+        <span 
+             href="/dominos/O2DkR/"
+           
+           class="arrow">
+        </span>
+      </div>
+    </div>
+  </a>
+</li>
+
+
+
+        
+      
+    </ul>
+    
+      <a href="#" class="other-registration-item see-more" data-event-name="Expanded Branch List">
+        Sjá allt
+      </a>
+    
+  </div>
+</div>
+
+        
+
+        
+          
+
+<div class="result-info-component">
+  <div id="Upplysingar" class="result-info-component-header collapsible-icon-minus collapsible-header"
+       data-collapse-status="true"
+       aria-expanded="true">
+    <h3>Upplýsingasíða</h3>
+  </div>
+  <div class="result-info-component-data">
+    <div class="result-body-info infodata">
+      <p style="text-align: center;"><br></p><p style="text-align: center;"><img src="https://is-ja-stella.s3.eu-west-1.amazonaws.com/images/2866557c-5c53-45bb-b576-5ef0a7a11503_orig"></p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;">&nbsp;</p>
+    </div>
+  </div>
+</div>
+
+        
+
+        <div class="padder-before-footer hide-when-not-small" style="height: 24px"></div>
+      </div>
+
+    
+    <script type="application/ld+json">
+      {"@context": "http://schema.org", "@type": "LocalBusiness", "name": "Domino's Pizza", "image": ["https://thumbs-cdn.ja.is/is-ja-stella/images/3587c501-7a02-4cfa-9676-39e0c1bc6f21_orig/120x70/0,0,2694,561/0/0/1a4b26e78e08bca2/"]}
+    </script>
+    
+  </div>
+
+
+  
+  <div id="app" class="vue-container" >
+    
+  <ja-multi-header></ja-multi-header>
+
+
+    <div class="body" >
+      
+  <ja-body></ja-body>
+
+    </div>
+    <footer class="footer " >
+      
+        
+  <ja-footer></ja-footer>
+
+      
+    </footer>
+
+
+    
+      <ja-suggestion-button ></ja-suggestion-button>
+    
+
+    <ja-dropdown-menu></ja-dropdown-menu>
+  </div>
+  
+
+  <script src="https://cdn.adnuntius.com/adn.js" async></script>
+  <script id="map_tiles_config" type="application/json">{"MAP_TILES_URL": "https://tiles.aws-prod.ja.is/static/styles/"}</script>
+  <script id="turnstile_config" type="application/json">{"site_key": "0x4AAAAAAA0UV0e2xRyNu0er"}</script>
+  
+  <script>
+    window.item = {
+      name: "Domino&#x27;s Pizza",
+      cluster: "dominos",
+    }
+    
+  </script>
+  
+  
+  <script src="https://jaweb-static-cdn.ja.is/dist/app-6667c63ae6eb727e1e19.d9a4ba288ad2.js" ></script>
+
+  <script src="https://jaweb-static-cdn.ja.is/dist/product_page-0c8b7c6884bbbcefc1a2.5289ff5357d1.js" ></script>
+
+
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
+  
+<!-- tracking begins -->
+
+<script src="https://jaweb-static-cdn.ja.is/js/jquery-3.3.1.min.a09e13ee94d5.js"></script>
+ 
+ <script type="text/javascript" src="https://jaweb-static-cdn.ja.is/ja_segment/track.791a8afe0978.js"></script>
+<script>
+  window.autotracking.init({
+    getAdditionalProperties: function(el, properties) {
+      function getMediaSize(w) {
+        return w < 768 ? 'mobile' : w < 992 ? 'tablet' : 'desktop';
+      }
+
+      properties['nameId'] = (el && el.closest('[data-name-id]').data('name-id')) || properties['nameId'];
+      properties['clusterKey'] = (el && el.closest('[data-cluster-key]').data('cluster-key')) || properties['clusterKey'];
+      properties['listingId'] = (el && el.closest('[data-listing-id]').data('listing-id')) || properties['listingId'];
+      properties['listingGroupId'] = (el && el.closest('[data-listing-group-id]').data('listing-group-id')) || properties['listingGroupId'];
+      properties['category'] = (el && el.closest('[data-category]').data('category')) || properties['category'];
+      properties['label'] = (el &&  el.closest('[data-cluster-key]').data('cluster-key')) || properties['label'];
+      properties['device'] = getMediaSize(window.innerWidth);
+      return properties;
+    }
+  })
+</script>
+<!-- tracking ends -->
+
+
+</body>
+</html>
+<!-- Generated by 0.0.0.0 on 15-10-2026 12:38:09 -->
